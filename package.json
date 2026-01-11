@@ -1,0 +1,72 @@
+{
+  "name": "api-tester",
+  "displayName": "API Tester",
+  "description": "A simple API testing extension for VS Code",
+  "author": "sujan pokharel",
+  "publisher": "sujanpokharel",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:api-tester.open",
+    "onView:apiTesterView",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "api-tester.open",
+        "title": "Open API Tester"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "apiTesterContainer",
+          "title": "API Tester",
+          "icon": "$(globe)"
+        }
+      ]
+    },
+    "views": {
+      "apiTesterContainer": [
+        {
+          "id": "apiTesterView",
+          "name": "API Tester"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "api-tester.open",
+          "when": "view == apiTesterView",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.108.1",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.52.0",
+    "eslint": "^9.39.2",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
