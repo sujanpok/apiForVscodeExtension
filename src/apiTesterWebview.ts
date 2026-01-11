@@ -20,6 +20,7 @@ export function getWelcomeContent() {
     <h1>Welcome to API Tester!</h1>
     <p>This extension allows you to test APIs with GET, POST, PUT, DELETE methods and token authentication.</p>
     <p>Click the globe icon in the activity bar to get started.</p>
+    <p><small>Created by <a href="https://sujanpokharel.info.np/" target="_blank">Sujan Pokharel</a> | Version 0.1.0</small></p>
 </body>
 </html>`;
 }
@@ -49,6 +50,7 @@ export function getWebviewContent() {
 </head>
 <body>
     <h1>API Tester</h1>
+    <p><small>Created by <a href="https://sujanpokharel.info.np/" target="_blank">Sujan Pokharel</a> | Version 0.1.0</small></p>
     <div class="form-group">
         <label for="method">Method:</label>
         <select id="method">
