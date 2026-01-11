@@ -6,8 +6,22 @@ export function getWelcomeContent() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to API Tester</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            text-align: center; 
+            padding: 20px;
+            background-color: var(--vscode-editor-background);
+            color: var(--vscode-editor-foreground);
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale;
+        }
         .logo { width: 100px; height: 100px; margin: 20px auto; }
+        a {
+            color: var(--vscode-textLink-foreground);
+        }
+        a:hover {
+            color: var(--vscode-textLink-activeForeground);
+        }
     </style>
 </head>
 <body>
@@ -36,16 +50,59 @@ export function getWebviewContent() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Tester</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale;
+            background-color: var(--vscode-editor-background);
+            color: var(--vscode-editor-foreground);
+        }
         .form-group { margin-bottom: 10px; }
-        label { display: block; margin-bottom: 5px; }
-        input, select, textarea { width: 100%; padding: 8px; }
-        button { padding: 10px 20px; background: #007acc; color: white; border: none; cursor: pointer; }
-        button:hover { background: #005aa3; }
+        label { 
+            display: block; 
+            margin-bottom: 5px;
+            color: var(--vscode-editor-foreground);
+        }
+        input, select, textarea { 
+            width: 100%; 
+            padding: 8px;
+            background-color: var(--vscode-input-background);
+            color: var(--vscode-input-foreground);
+            border: 1px solid var(--vscode-input-border);
+        }
+        button { 
+            padding: 10px 20px; 
+            background: var(--vscode-button-background);
+            color: var(--vscode-button-foreground);
+            border: none; 
+            cursor: pointer; 
+        }
+        button:hover { 
+            background: var(--vscode-button-hoverBackground);
+        }
         #response { margin-top: 20px; }
         .response-section { margin-bottom: 15px; }
-        .response-section h3 { margin: 0 0 5px 0; color: #007acc; }
-        .response-content { background: #ffffff; padding: 10px; border: 1px solid #ccc; white-space: pre-wrap; font-family: 'Courier New', monospace; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .response-section h3 { 
+            margin: 0 0 5px 0; 
+            color: var(--vscode-textLink-foreground);
+        }
+        .response-content { 
+            background: var(--vscode-textBlockQuote-background);
+            padding: 10px; 
+            border: 1px solid var(--vscode-textBlockQuote-border);
+            white-space: pre-wrap; 
+            font-family: 'Courier New', monospace; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale;
+            color: var(--vscode-textBlockQuote-foreground);
+        }
+        a {
+            color: var(--vscode-textLink-foreground);
+        }
+        a:hover {
+            color: var(--vscode-textLink-activeForeground);
+        }
     </style>
 </head>
 <body>
